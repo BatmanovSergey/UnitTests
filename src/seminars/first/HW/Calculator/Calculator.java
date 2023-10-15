@@ -1,6 +1,44 @@
 package seminars.first.HW.Calculator;
 
+import java.util.Scanner;
+
 public class Calculator {
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int firstOperand = getOperand();
+        int secondOperand = getOperand();
+        char operator = getOperation();
+        int result = calculation(firstOperand, secondOperand, operator);
+        System.out.printf("Результат вычисления = %d", result);
+    }
+
+
+    public static char getOperation() {
+        System.out.println("Введите операцию:");
+        char operation = scanner.next().charAt(0);
+        return operation;
+    }
+
+    public static int getOperand() {
+        System.out.println("Введите число:");
+        int operand;
+
+        if (scanner.hasNextInt()) {
+            operand = scanner.nextInt();
+        } else {
+            System.out.println("Вы допустили ошибку при вводе числа. Попробуйте ещё раз");
+            if (scanner.hasNextInt()) {
+                scanner.next();
+                operand = getOperand();
+            } else {
+                throw new IllegalStateException("Ошибка ввода данных!");
+            }
+        }
+        return operand;
+    }
+
+
     public static int calculation(int firstOperand, int secondOperand, char operator) {
         int result;
 
@@ -48,9 +86,9 @@ public class Calculator {
         if (discountAmount == 0) return purchaseAmount;
         else if (discountAmount == 100) return 0;
         else if (discountAmount < 0 || discountAmount > 100)
-            throw new ArithmeticException ("Неверное значение скидки");
+            throw new ArithmeticException("Неверное значение скидки");
         else
-            return purchaseAmount - (purchaseAmount*discountAmount)/100;
+            return purchaseAmount - (purchaseAmount * discountAmount) / 100;
         // Метод должен возвращать сумму покупки со скидкой
     }
 }
