@@ -91,4 +91,14 @@ public class Calculator {
             return purchaseAmount - (purchaseAmount * discountAmount) / 100;
         // Метод должен возвращать сумму покупки со скидкой
     }
+
+    // Лекция 3
+    public static double computeAreaCircle(int radius) {
+//        return  3.14 * Math.pow(radius, 2); // вариант 1
+        return Math.PI * Math.pow(radius, 2); // вариант 2
+    }
+
+    public static double computeLenghtCircle(int radius) {
+        return Math.PI * 2 * radius;
+    }
 }
