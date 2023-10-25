@@ -17,5 +17,9 @@
     <orderEntry type="library" name="byte-buddy-agent-1.12.22" level="project" />
     <orderEntry type="library" name="mockito-core-5.0.0" level="project" />
     <orderEntry type="library" name="objenesis-3.3" level="project" />
+    <orderEntry type="library" name="testcontainers-1.17.6" level="project" />
+    <orderEntry type="library" name="guava-32.1.2-jre" level="project" />
+    <orderEntry type="library" name="selenium-java-4.11" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

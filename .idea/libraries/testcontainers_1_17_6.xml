@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="testcontainers-1.17.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/testcontainers-1.17.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

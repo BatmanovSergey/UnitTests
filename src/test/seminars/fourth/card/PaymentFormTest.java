@@ -25,7 +25,7 @@ class PaymentFormTest {
 //        int expected = amount + 100;
         CreditCard card = mock(CreditCard.class);
         PaymentForm form = new PaymentForm(card);
-
+//Если мы проверяем void метод, то блок when...thenReturn нам не нужен
         form.pay(amount);
 //        form.pay(amount);
         verify(card, times(1)).charge(amount);

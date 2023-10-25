@@ -17,7 +17,6 @@ import java.util.List;
 
 public class Main {
 
-
     //**
     // 4.3. Предположим, у вас есть класс WeatherService, который имеет метод getCurrentTemperature(),
     // обращающийся к внешнему API для получения информации о текущей температуре.
@@ -42,12 +41,10 @@ public class Main {
     }
 
 
-
-
     //*
 // 4.4.
 //Вам необходимо написать тест с использованием моков для сервиса бронирования отелей.
-//        Условие: У вас есть класс HotelService с методом public boolean isRoomAvailable(int roomId), который обычно проверяет, доступен ли номер в отеле.
+// Условие: У вас есть класс HotelService с методом public boolean isRoomAvailable(int roomId), который обычно проверяет, доступен ли номер в отеле.
 //Вам необходимо проверить правильность работы класса BookingService, который использует HotelService для бронирования номера, если он доступен.
 // *
 //    public static void main(String[] args) {

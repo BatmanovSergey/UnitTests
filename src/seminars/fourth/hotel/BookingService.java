@@ -17,5 +17,4 @@ public class BookingService {
             return false; // Номер не доступен
         }
     }
-
 }
