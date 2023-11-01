@@ -1,9 +1,8 @@
 package seminars.six;
 
-
 import java.util.List;
 
-public class AverageList {
+public class AverageOfList {
 
     public double averageValue(List<Integer> list) {
         double sum = 0;

@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.Arrays;
@@ -25,20 +26,13 @@ public class AverageListTest {
     @ParameterizedTest
     @MethodSource("provideParameters")
     public void testAverageValue(List<Integer> list1, double result) {
-        AverageList averageList = new AverageList();
+        AverageOfList averageList = new AverageOfList();
         double average = averageList.averageValue(list1);
         assertThat(average).isEqualTo(result);
     }
 
     static Stream<Arguments> provideParameters() {
-        return Stream.of(
-                Arguments.of(Arrays.asList(1, 2, 3), 2),
-                Arguments.of(Arrays.asList(-2, 4, -2), 0),
-                Arguments.of(Arrays.asList(-3, -3, -3), -3),
-                Arguments.of(Arrays.asList(2, 3), 2.5),
-                Arguments.of(Arrays.asList(0, 0, 0), 0),
-                Arguments.of(Arrays.asList(), 0)
-        );
+        return Stream.of(Arguments.of(Arrays.asList(1, 2, 3), 2), Arguments.of(Arrays.asList(-2, 4, -2), 0), Arguments.of(Arrays.asList(-3, -3, -3), -3), Arguments.of(Arrays.asList(2, 3), 2.5), Arguments.of(Arrays.asList(0, 0, 0), 0), Arguments.of(Arrays.asList(), 0));
     }
 
 
